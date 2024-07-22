@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
 * {
+    font-family: "Roboto Slab", serif;
     margin: 0;
     box-sizing: border-box;
 }
@@ -141,31 +144,40 @@
 .copyright-text {
     margin: 0
 }
+
 .col {
     float: left;
     width: 33.33%;
-    padding: 0 10px; /* Sütunlara padding eklenerek hizalama yapılır */
+    padding: 0 10px;
+    /* Sütunlara padding eklenerek hizalama yapılır */
     padding-right: 10px;
 }
+
 .footer-links {
     list-style: none;
-    padding:0;
+    padding: 0;
 }
+
 .footer-links li a {
     text-decoration: none;
 }
+
 .footer {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px; /* Başlık ile içerik arasındaki boşluk */
+    margin-top: 20px;
+    /* Başlık ile içerik arasındaki boşluk */
 }
+
 .footer .col {
     box-sizing: border-box;
     color: white;
 }
+
 .footer h6 {
     margin-bottom: 20px;
 }
+
 @media (max-width:991px) {
     .site-footer [class^=col-] {
         margin-bottom: 30px
@@ -261,5 +273,3 @@
 /* İstanbul */
 
 /* style.css */
-
-
