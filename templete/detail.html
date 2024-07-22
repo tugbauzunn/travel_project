@@ -7,20 +7,51 @@
     <title>Gezi Rehberim</title>
     <link rel="icon" type="image/png" href="/img/icon.png">
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/css/style.css">
+    <style>
+        .card {
+            width: 80%;
+            margin: auto;
+        }
+
+        .card-img-top {
+            position: relative;
+            height: 200px;
+            /* Resmin boyutunu küçültmek için */
+            object-fit: cover;
+        }
+
+        .card-img-overlay {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .card-title {
+            margin: 20px;
+            color: black;
+            width: 100%;
+            font-weight: bold;
+        }
+
+        /* Haritanın boyutunu ayarlamak için */
+        #map {
+            height: 400px;
+            width: 100%;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Hava Durumu Start -->
-    <div id="id361ea65fd227e"
-        a='{"t":"g7bs","v":"1.2","lang":"tr","locs":[1474],"ssot":"c","sics":"ds","cbkg":"rgba(255,255,255,0)","cfnt":"rgb(0,0,0)","cend":"rgba(0,0,0,0)","slis":36,"slfs":17}'>
-        Hava Durumu Veri Kaynağı: <a
-            href="https://sharpweather.com/weather_istanbul/30_days/">sharpweather.com/weather_istanbul/30_days/</a>
+    <div id="id361ea65fd227e" a='{"t":"g7bs","v":"1.2","lang":"tr","locs":[1474],"ssot":"c","sics":"ds","cbkg":"rgba(255,255,255,0)","cfnt":"rgb(0,0,0)","cend":"rgba(0,0,0,0)","slis":36,"slfs":17}'>
+        Hava Durumu Veri Kaynağı: <a href="https://sharpweather.com/weather_istanbul/30_days/">sharpweather.com/weather_istanbul/30_days/</a>
     </div>
     <script async src="https://static1.sharpweather.com/widgetjs/?id=id361ea65fd227e"></script>
     <!-- Hava Durumu End -->
@@ -32,9 +63,7 @@
             <form class="d-flex mx-auto" role="search">
                 <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
             </form>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -46,8 +75,7 @@
                         <a class="nav-link" href="#">Plan Oluştur</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Profil
                         </a>
                         <ul class="dropdown-menu">
@@ -65,12 +93,48 @@
     </nav>
     <!-- Navbar End -->
 
-    
-   
+    <!-- Detail Start -->
+    <div class="container mt-2">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 p-5">
+                <div class="card">
+                    <img src="/img/zipline-istanbul.jpg" class="card-img-top" alt="...">
+                    <div class="card-img-overlay">
+                    </div>
+                    <h5 class="card-title text-center">GÜNÜBİRLİK İSTANBUL KAÇAMAKLARI – MAX 1,5 SAAT MESAFEDEKİ YERLER
+                    </h5>
+                    <div class="card-body pt-0">
+                        <p class="card-text ps-5 pe-5">Yazının başında peşinen söyleyelim; İstanbul’un içindeki çoğu kaçamak yerleri ya “Burayı da mı keşfetmişler!” diye sitem edeceğiniz bakir ama yorulmuş doğa parçaları ya da insanların şehirden uzaklaşmak, kahvaltı yapmak ya da akşam yemeği yemek için gittiği ücra koylar ve köyler. Aslına bakarsanız buralardaki restoranlar pek de öyle parmak falan yedirtmiyor ama işte hava değişikliği olsun diye, bir parça çim ya da deniz havası için, mahallemizde olsa pek de uğramayacağımız yerleri tıka basa dolduruyoruz. Bazen bu yarım yamalak keyifler için mekanlara garip garip faturalar ödüyoruz. Ve işin en tuhafı, İstanbul’da sıkıştıkça buraları yine de öpüp başımıza koyuyoruz. 😀</p>
+                        <p class="card-text pe-5 ps-5">Tabii yazın bunlara deniz kaçamakları ve orman gezileri de ekleniyor. Ancak İstanbul plajlarında başkalarına saygısı olmayanlar nedeniyle rahat etmek mümkün değil. Havlunuzu serdiğiniz yere her an bir araba çekip yanınızda horon tepebilir, sizi mangal dumanına boğabilir, üzerinizde top oynayabilir vs… Dolayısı ile eğer yüzmeye niyetiniz varsa en iyisi bunu bir özel tesis bünyesinde yapmanız. Bir de müsilaj mevuzusu var tabii…</p>
+                    </div>
+                    <h5 class="card-title text-center"> İstanbul’dan Diğer Kaçış Önerileri</h5>
+                    <ul class="list-group list-group-flush pe-5 ps-5">
+                        <li class="list-group-item">1. İstanbul’dan Çıkmadan Resete Bas: <br>
+                            Gerçek anlamda bir tazelenmeye ihtiyacınız varsa buralarda bir ev tutarak tamamen uzaklaşmayı da bir düşünün: <a href="http://www.tatilbudur.com" target="_blank">İstanbul’da Doğa & Deniz Tatili İçin Kiralık Ev & Bungalovlar</a></li>
+                        <li class="list-group-item">2. İstanbul’un Keyfini Tekne Boğaz’a Açılarak Sür: <br>
+                            <a href="http://www.tatilbudur.com" target="_blank">İstanbul’da Günlük ve Saatlik Kiralanabilir Tekneler</a>
+                        </li>
+                        <li class="list-group-item">3. 1,5 – 3 saat Mesafedeki Alternatifler <br>
+                            Biraz daha yol yapıp İstanbul’dan çıkmayı gözünüz yerse de, <br>1,5 ila max 3 saat mesafedeki kaçamak yerlerinden de size güzel evleri derledik: <br>
+                            <a href="http://www.tatilbudur.com" target="_blank">İstanbul’a Yakın Bungalovlar ve Kiralık Evler</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detail End -->
 
-
-
-
+    <!-- Map Start -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-4">Harita</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Map End -->
 
     <!-- Footer Start -->
     <footer class="site-footer">
@@ -78,11 +142,7 @@
             <div class="row">
                 <div class="col-sm-12 col-md-5 pe-5">
                     <h6 class="mb-3">HAKKIMIZDA</h6>
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam eaque
-                        harum officia, facere ipsam quod optio est excepturi, corrupti repudiandae nam expedita
-                        reiciendis vero obcaecati. Reiciendis ducimus impedit, in dolore atque quibusdam quod, hic
-                        aperiam quidem vitae error, deleniti labore et doloremque accusantium rem enim neque
-                        voluptatibus dolor explicabo.</p>
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam eaque harum officia, facere ipsam quod optio est excepturi, corrupti repudiandae nam expedita reiciendis vero obcaecati. Reiciendis ducimus impedit, in dolore atque quibusdam quod, hic aperiam quidem vitae error, deleniti labore et doloremque accusantium rem enim neque voluptatibus dolor explicabo.</p>
                 </div>
 
                 <div class="col-xs-6 col-md-5 pe-5">
@@ -100,7 +160,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-6 col-md-2  ms-0">
+                <div class="col-xs-6 col-md-2 ms-0">
                     <h6 class="">www.gezirehberim.com</h6>
                     <ul class="footer-links">
                         <li><a href="">Hakkımızda</a></li>
@@ -116,9 +176,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by
-                        <a href="#">Scanfcode</a>.
-                    </p>
+                    <p class="copyright-text">Copyright &copy; 2024 All Rights Reserved by <a href="#">Scanfcode</a>.</p>
                 </div>
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
@@ -134,10 +192,27 @@
     </footer>
     <!-- Footer End -->
 
+    <!-- Google Maps JS -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=817a4399b0d819b7cf6fd2a145975385&callback=initMap"></script>
+    <script>
+        function initMap() {
+            var istanbul = { lat: 41.0082, lng: 28.9784 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: istanbul,
+                zoom: 12
+            });
+            var marker = new google.maps.Marker({
+                position: istanbul,
+                map: map,
+                title: 'İstanbul'
+            });
+        }
+    </script>
+
     <!-- Bootstrap Script -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-Yu0SKNN6vDd2J6FElP4m0yL+Qu7WcQ4NUvT5vI/kPjYgtNp1UL4fSUxZ2r7P9IQe" crossorigin="anonymous"></script>
     <script src="/js/app.js"></script>
 </body>
 
