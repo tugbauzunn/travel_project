@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+.navbar-brand img {
+    height: 100%;
+    max-height: 30px;
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 5px;
+
+}
+
 .navbar-custom {
     background: linear-gradient(90deg, #00bfff, #00ff7f);
 }
@@ -28,11 +37,12 @@
 }
 
 .search-input {
-    width: 250px;
-    /* Arama kutucuğunun genişliğini istediğiniz boyuta göre ayarlayabilirsiniz */
-    background-color: #b0e0e6;
-    /* Navbarın renk tonuyla uyumlu bir renk ayarlayın */
-    border: none;
+    width: 400px;
+    font-size: 1rem;
+}
+
+.search-input:focus {
+    outline: none;
 }
 
 
