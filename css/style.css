@@ -14,6 +14,11 @@
     margin-bottom: 5px;
 
 }
+.navbar-nav .nav-link img {
+    height: 20px; 
+    margin-right: 8px; 
+    margin-bottom: 5px;
+}
 
 .navbar-custom {
     background: linear-gradient(90deg, #00bfff, #00ff7f);

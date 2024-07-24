@@ -12,6 +12,8 @@
     <!-- Bootstrap Icons CDN -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+    <!-- Lottie  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -28,7 +30,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container d-flex justify-content-between">
-            <a class="navbar-brand" href="/templete/index.html"><img src="/img/icon.png" alt="Istanbul Image">Gezi
+            <a class="navbar-brand" href="/animasyon/index.html"><img src="/img/icon.png" alt="Istanbul Image">Gezi
                 Rehberim </a>
             <div class="d-flex flex-grow-1 justify-content-center">
                 <form class="d-flex mx-auto" role="search">
@@ -44,7 +46,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/templete/istanbul.html">İstanbul</a>
+                        <a class="nav-link active" aria-current="page" href="/templete/istanbul.html"><img
+                                src="/img/icon2.png" alt="Istanbul Image">İstanbul</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Plan Oluştur</a>
@@ -69,83 +72,94 @@
     </nav>
     <!-- Navbar End -->
 
+    <!-- Plan Start -->
+    <div class="container d-flex justify-content-center align-items-center mt-2 shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+        <div class="row w-100">
+            <div class="col-sm-12 col-md-4 d-flex flex-column align-items-center">
+                <div id="lottie" style="width: 200px; height: 200px;"></div>
+                <div class="btn-container mt-3 mb-3 p-2">
+                    <a class="btn btn-primary pe-5 ps-5 pt-2 pb-2">Plan Oluştur</a>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 d-flex flex-column align-items-center justify-content-center">
+                <p class="fs-4 fw-bold">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? <br>
+                    Size İstanbul’un en
+                    güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Plan End -->
+
     <!-- Card İstanbul Start -->
     <div class="container mt-5">
         <div class="text-center mb-4">
             <h3 class="fw-bold">İstanbul Gezi Rehberi</h3>
         </div>
-        <div class="row justify-content-center  ms-5">
-            <div class="col-md-4 mb-4 mt-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                 <a href="detail.html" class="card-link" style="text-decoration: none; color: inherit;">
-                    <div class="card d-flex flex-column align-items-stretch" style="width: 22rem;">
+                    <div class="card d-flex flex-column align-items-stretch" style="width: 100%;">
                         <img src="/img/bir.jpg" class="card-img-top rounded-0" alt="...">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold">GÜNÜBİRLİK İSTANBUL KAÇAMAKLARI – MAX 1,5 SAAT MESAFEDEKİ
-                                YERLER
-                            </h5>
+                                YERLER</h5>
                             <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size
-                                İstanbul’un
-                                en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.
-                            </p>
+                                İstanbul’un en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek
+                                yerlerini derledik.</p>
                             <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                         </div>
                     </div>
+                </a>
             </div>
-            <div class="col-md-4 mb-4 mt-4">
-                <div class="card d-flex flex-column align-items-stretch" style="width: 22rem;">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card d-flex flex-column align-items-stretch" style="width: 100%;">
                     <img src="/img/iki.jpg" class="card-img-top rounded-0" alt="...">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">GÜNÜBİRLİK İSTANBUL KAÇAMAKLARI – MAX 1,5 SAAT MESAFEDEKİ YERLER
+                        <h5 class="card-title fw-bold">GÜNÜBİRLİK İSTANBUL KAÇAMAKLARI – MAX 1,5 SAAT MESAFEDEKİ
+                            YERLER
                         </h5>
-                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size İstanbul’un
-                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.</p>
+                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size
+                            İstanbul’un
+                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.
+                        </p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 mt-4">
-                <div class="card d-flex flex-column align-items-stretch" style="width: 22rem;">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card d-flex flex-column align-items-stretch" style="width: 100%;">
                     <img src="/img/uc.jpg" class="card-img-top rounded-0" alt="...">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">GÜNÜBİRLİK İSTANBUL KAÇAMAKLARI – MAX 1,5 SAAT MESAFEDEKİ YERLER
+                        <h5 class="card-title fw-bold">GÜNÜBİRLİK İSTANBUL KAÇAMAKLARI – MAX 1,5 SAAT MESAFEDEKİ
+                            YERLER
                         </h5>
-                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size İstanbul’un
-                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.</p>
+                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size
+                            İstanbul’un
+                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.
+                        </p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-start ms-5">
-            <div class="col-md-4 mb-4 mt-4">
-                <div class="card d-flex flex-column align-items-stretch" style="width: 22rem;">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card d-flex flex-column align-items-stretch" style="width: 100%;">
                     <img src="/img/dort.jpg" class="card-img-top rounded-0" alt="...">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold">ATATÜRK ARBORETUMU – NEREDE, NASIL GİDİLİR, YEME İÇME</h5>
                         <p class="card-text">Atatürk Arboretumu İstanbul’da yemyeşil bir vaha. O kadar fotojenik ki
                             düğün fotogafçısı, dizi seti eksik olmuyor. Kalabalıklardan burada da kaçış yok ama en
-                            azından mangal dumanı ve futbol oynayan dayılardan kaçabileceğiniz yemyeşil bir park.</p>
+                            azından mangal dumanı ve futbol oynayan dayılardan kaçabileceğiniz yemyeşil bir park.
+                        </p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4 mt-4">
-                <div class="card d-flex flex-column align-items-stretch" style="width: 22rem;">
-                    <img src="/img/iki.jpg" class="card-img-top rounded-0" alt="...">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">ATATÜRK ARBORETUMU – NEREDE, NASIL GİDİLİR, YEME İÇME
-                        </h5>
-                        <p class="card-text">Atatürk Arboretumu İstanbul’da yemyeşil bir vaha. O kadar fotojenik ki
-                            düğün fotogafçısı, dizi seti eksik olmuyor. Kalabalıklardan burada da kaçış yok ama en
-                            azından mangal dumanı ve futbol oynayan dayılardan kaçabileceğiniz yemyeşil bir park.</p>
-                        <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
     <!-- Card İstanbul End -->
+
 
     <!-- Card Bağcılar Start -->
     <div class="container mt-4">
@@ -159,8 +173,10 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold">Bağcılar'da Gezilecek Yerler
                         </h5>
-                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size İstanbul’un
-                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.</p>
+                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size
+                            İstanbul’un
+                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.
+                        </p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                     </div>
                 </div>
@@ -171,8 +187,10 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold">Bağcılar'da Kafe Kültürü
                         </h5>
-                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size İstanbul’un
-                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.</p>
+                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size
+                            İstanbul’un
+                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.
+                        </p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                     </div>
                 </div>
@@ -183,8 +201,10 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold">Bağcılar'da Engelsiz Parklar
                         </h5>
-                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size İstanbul’un
-                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.</p>
+                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size
+                            İstanbul’un
+                            en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini derledik.
+                        </p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                     </div>
                 </div>
@@ -205,10 +225,12 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold">SULTANAHMET CAMİ – HİKAYESİ VE GİTMEDEN BİLMENİZ GEREKENLER
                         </h5>
-                        <p class="card-text">İstanbul’un tarihi semtine adını veren, her daim kalabalık olan Sultanahmet
+                        <p class="card-text">İstanbul’un tarihi semtine adını veren, her daim kalabalık olan
+                            Sultanahmet
                             Cami tüm İstanbul’a görmesi gereken yerler listlerinde en üst sıralarda yer alıyor. Bana
                             sorarsanız daha estetetik camiler var ama elbette Sultanahmet Cami’ni tarihteki ve şehir
-                            silüetindeki yeri ile bambaşka bir ağırlığa sahip. Gitmeden önce tarihinden kılık kıyafete
+                            silüetindeki yeri ile bambaşka bir ağırlığa sahip. Gitmeden önce tarihinden kılık
+                            kıyafete
                             bilmeniz gerekenleri toparladık.</p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                     </div>
@@ -220,11 +242,14 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title fw-bold">KAPALIÇARŞI: TARİHİ, GEZİLECEK YERLERİ, ALIŞVERİŞ REHBERİ
                         </h5>
-                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size İstanbul’un
+                        <p class="card-text">Hafta sonu İstanbul’dan kaçmak için yer mi arıyorusunuz? Size
+                            İstanbul’un
                             en güzel tatil yerlerini, doğa kaçamaklarını ve denize girilebilecek yerlerini
                             derledik.Yüzlerce yıllık tarihi, 4000 dükkan, 500 tezgahtan ve 21 kapısı ile dünyanın en
-                            büyük kapalı tarihi üstü kapalı çarşısı olan Kapalıçarşı’yı ister alışveriş, ister kültürel
-                            gezi niyetine en az bir kez görmek gerekir. İşte bu yazımızda ziyaretinizin en iyi şekilde
+                            büyük kapalı tarihi üstü kapalı çarşısı olan Kapalıçarşı’yı ister alışveriş, ister
+                            kültürel
+                            gezi niyetine en az bir kez görmek gerekir. İşte bu yazımızda ziyaretinizin en iyi
+                            şekilde
                             geçmesi için tarihinden en güzel dükkanlara Kapalıçarşı hakkında bilmeniz gerekenleri
                             bulacaksınız.</p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
@@ -235,12 +260,15 @@
                 <div class="card d-flex flex-column align-items-stretch" style="width: 22rem;">
                     <img src="/img/yarımada2.jpg" class="card-img-top rounded-0" alt="...">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">YEREBATAN SARNICI HAKKINDA: TARİHİ, BİLET ÜCRETLERİ, GİZEMLERİ
+                        <h5 class="card-title fw-bold">YEREBATAN SARNICI HAKKINDA: TARİHİ, BİLET ÜCRETLERİ,
+                            GİZEMLERİ
                         </h5>
                         <p class="card-text">Sultanahmet’te bulunan Yerebatan Sarnıcı İstanbul’un en özel tarihi
                             mekanlarından. Hatta iddia ediyoruz, burası kadar insanı mistik büyüsü ile insanı içine
-                            çeken bir yer daha İstanbul’da yok. Bu yazımızdan gidenler için faydalı bilgilerin yanı sıra
-                            Yerebatan Sarnıcı’nın tarihi, mimarisi ve efsaneleri ile ilgili bilgileri bulacaksınız.</p>
+                            çeken bir yer daha İstanbul’da yok. Bu yazımızdan gidenler için faydalı bilgilerin yanı
+                            sıra
+                            Yerebatan Sarnıcı’nın tarihi, mimarisi ve efsaneleri ile ilgili bilgileri bulacaksınız.
+                        </p>
                         <a href="#" class="btn btn-primary mt-auto">Plan Oluştur</a>
                     </div>
                 </div>
@@ -256,7 +284,8 @@
             <div class="row">
                 <div class="col-sm-12 col-md-5 pe-5">
                     <h6 class="mb-3">HAKKIMIZDA</h6>
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam eaque
+                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia aliquam
+                        eaque
                         harum officia, facere ipsam quod optio est excepturi, corrupti repudiandae nam expedita
                         reiciendis vero obcaecati. Reiciendis ducimus impedit, in dolore atque quibusdam quod, hic
                         aperiam quidem vitae error, deleniti labore et doloremque accusantium rem enim neque
@@ -317,6 +346,25 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="/js/app.js"></script>
+
+    <!-- Animasyon Js -->
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: '/animation.json' // JSON dosyasının doğru yolu
+        });
+
+        animation.addEventListener('DOMLoaded', function () {
+            console.log('Animasyon yüklendi!');
+        });
+
+        animation.addEventListener('data_failed', function () {
+            console.error('Animasyon verileri yüklenemedi.');
+        });
+    </script>
 </body>
 
 </html>
