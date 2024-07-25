@@ -67,7 +67,7 @@ ilceler.forEach((ilce, index) => {
 
 
 //!İstanbul 
-
+/*
 document.addEventListener('DOMContentLoaded', function() {
     // İstanbul ilçeleri listesi ve URL'leri
     const ilceler = [
@@ -131,6 +131,59 @@ document.addEventListener('DOMContentLoaded', function() {
         // Örneğin, başka bir sayfaya yönlendirme yapabilirsiniz:
         // window.location.href = '/plan-olustur';
     });
+});
+
+*/
+
+
+const ilceler1 = [
+    { name: "Adalar", mekanlar: ["Büyükada", "Heybeliada", "Kınalıada"] },
+    { name: "Arnavutköy", mekanlar: ["Karaburun Sahili", "Terkos Gölü", "Aziz Pabuççu Cami"] },
+    { name: "Ataşehir", mekanlar: ["Watergarden İstanbul", "Mimar Sinan Camii", "Düştepe Oyun Müzesi"] },
+    { name: "Avcılar", mekanlar: ["Avcılar Sahili", "Pelican Mall", "Barış Manço Kültür Merkezi"] },
+    { name: "Bağcılar", mekanlar: ["Güneşli Park AVM", "212 AVM", "Kirazlı Metro İstasyonu Çevresi"] },
+    { name: "Bahçelievler", mekanlar: ["Bahçelievler Kültür Merkezi", "Metroport AVM", "İstanbul Aydın Üniversitesi Kampüsü"] },
+    { name: "Bakırköy", mekanlar: ["Florya Atatürk Deniz Köşkü", "Capacity AVM", "Atatürk Ormanı"] },
+    { name: "Başakşehir", mekanlar: ["Bahçeşehir Gölet Parkı", "Başakşehir Millet Bahçesi", "Mall of İstanbul"] },
+    { name: "Bayrampaşa", mekanlar: ["Forum İstanbul AVM", "İsfanbul AVM", "Bayrampaşa Şehir Parkı"] },
+    { name: "Beşiktaş", mekanlar: ["Dolmabahçe Sarayı", "Yıldız Parkı", "Bebek Sahili"] },
+    { name: "Beykoz", mekanlar: ["Polonezköy Tabiat Parkı", "Küçüksu Kasrı", "Mihrabat Tabiat Parkı"] },
+    { name: "Beylikdüzü", mekanlar: ["Yaşam Vadisi Parkı", "Beylikdüzü Sahili", "Marmara Park AVM"] },
+    { name: "Beyoğlu", mekanlar: ["Galata Kulesi", "İstiklal Caddesi", "Pera Müzesi"] },
+    { name: "Büyükçekmece", mekanlar: ["Büyükçekmece Sahili", "Tüyap Fuar ve Kongre Merkezi", "Mimar Sinan Köprüsü"] },
+    { name: "Çatalca", mekanlar: ["İnceğiz Mağaraları", "Çilingoz Tabiat Parkı", "Elbasan Köyü"] },
+    { name: "Çekmeköy", mekanlar: ["Taşdelen Mesire Alanı", "Alemdağ Ormanı", "Özyeğin Üniversitesi Kampüsü"] },
+    { name: "Esenler", mekanlar: ["Esenler Kültür Merkezi", "Dörtyol Meydanı", "Havaalanı Mahallesi Parkı"] },
+    { name: "Esenyurt", mekanlar: ["Torium AVM", "Esenyurt Belediyesi Kültür Merkezi", "Recep Tayyip Erdoğan Parkı"] },
+    { name: "Eyüpsultan", mekanlar: ["Eyüp Sultan Camii", "Pierre Loti Tepesi", "Feshane"] },
+    { name: "Fatih", mekanlar: ["Sultanahmet Camii", "Topkapı Sarayı", "Kapalıçarşı"] },
+    { name: "Gaziosmanpaşa", mekanlar: ["Gaziosmanpaşa Kültür ve Sanat Merkezi", "Karayolları Mahallesi Parkı", "İstanbul Vialand Tema Park"] },
+    { name: "Güngören", mekanlar: ["Kale Outlet Center", "Tozkoparan Kapalı Yüzme Havuzu", "Haznedar Parkı"] },
+    { name: "Kadıköy", mekanlar: ["Moda Sahili", "Bağdat Caddesi", "Kadıköy Çarşısı"] },
+    { name: "Kağıthane", mekanlar: ["Kağıthane Belediyesi Sosyal Tesisleri", "Hasbahçe Mesire Alanı", "Axis İstanbul AVM"] },
+    { name: "Kartal", mekanlar: ["Aydos Tepesi", "Dragos Sahili", "Kartal İstmarina AVM"] },
+    { name: "Küçükçekmece", mekanlar: ["Küçükçekmece Gölü", "Menekşe Plajı", "ArmoniPark Outlet Center"] },
+    { name: "Maltepe", mekanlar: ["Maltepe Sahil Parkı", "Başıbüyük Ormanı", "İdealtepe Spor Kulübü"] },
+    { name: "Pendik", mekanlar: ["Pendik Sahili", "Viaport Marina", "Aydos Tepesi"] },
+    { name: "Sancaktepe", mekanlar: ["Samandıra Mesire Alanı", "Prof. Dr. Necmettin Erbakan Külliyesi", "Abdurrahmangazi Türbesi"] },
+    { name: "Sarıyer", mekanlar: ["Emirgan Korusu", "Belgrad Ormanı", "Rumeli Hisarı"] },
+    { name: "Silivri", mekanlar: ["Silivri Sahili", "Silivri Kalesi", "Selimpaşa Limanı"] },
+    { name: "Sultanbeyli", mekanlar: ["Aydos Kalesi", "Sultanbeyli Gölet Parkı", "Prof. Dr. Necmettin Erbakan Kültür Merkezi"] },
+    { name: "Sultangazi", mekanlar: ["Sultangazi Şehir Ormanı", "Habibler Mesire Alanı", "Cebeci Parkı"] },
+    { name: "Şişli", mekanlar: ["İstanbul Cevahir AVM", "Bomontiada", "Atatürk Müzesi"] },
+    { name: "Tuzla", mekanlar: ["Viaport Marina", "Tuzla Sahili", "Tuzla Belediyesi Şelale Eğitim Parkı"] },
+    { name: "Ümraniye", mekanlar: ["Ümraniye Meydan AVM", "Canpark AVM", "Tantavi Sosyal Tesisleri"] },
+    { name: "Üsküdar", mekanlar: ["Kız Kulesi", "Çamlıca Tepesi", "Beylerbeyi Sarayı"] },
+    { name: "Zeytinburnu", mekanlar: ["Zeytinburnu Sahili", "Panorama 1453 Tarih Müzesi", "Merkezefendi Parkı"] }
+];
+
+const ilcelerListesi = document.getElementById('ilcelerListesi');
+
+ilceler1.forEach(ilce => {
+    const li = document.createElement('li');
+    li.classList.add('list-group-item');
+    li.innerHTML = `<strong>${ilce.name}</strong>: ${ilce.mekanlar.join(', ')}`;
+    ilcelerListesi.appendChild(li);
 });
 
 
