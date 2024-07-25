@@ -14,24 +14,114 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <style>
-        .list-group-item {
+        .calendar {
+            color: black;
+            padding: 50px 20px 50px 20px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 15px 2px #00bfff;
+
+        }
+
+        .calendar:hover {
+            box-shadow: 1px 1px 15px 2px #00ff7f;
+        }
+
+        .calendar table {
+            border-collapse: collapse;
+        }
+
+        .calendar th,
+        .calendar td {
+            border: none;
+            padding: 10px;
+            text-align: center;
+        }
+
+        td:hover {
+            background-color: #7b7bf0;
+        }
+
+        .cal-menu {
+            margin: auto;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .current-year,
+        .current-month,
+        #date {
+            border-radius: 7px;
+            padding: 5px 7px 5px 7px;
+            font-size: large;
+            font-weight: 900;
             cursor: pointer;
-            /* Liste öğelerine tıklanabilirlik ekler */
         }
 
-        .list-group-item:hover {
-            background-color: #f8f9fa;
-            /* Hover rengini değiştirir */
+        .current-year:hover,
+        .current-month:hover,
+        #date:hover,
+        #date>input:hover {
+            background-color: #00ff7f;
         }
 
-        .btn {
-            background: linear-gradient(360deg, #00bfff, #00ff7f);
-            width: 100%;
+        .cal-body {
+            display: flex;
+            justify-content: space-between;
         }
 
-        .btn:hover {
-            background: #0056b3;
+        .previous,
+        .next {
+            margin-top: 100px;
+            cursor: pointer;
+        }
+
+        .previous>i,
+        .next>i {
+            padding: 5px;
+            background-color: #00bfff;
+        }
+
+        .previous>i:hover,
+        .next>i:hover {
+            box-shadow: 1px 1px 5px 1px #00bfff;
+
+        }
+
+        #date>input {
+            background-color: #7b7bf0;
+            border: 1px solid #7b7bf0;
+            border-radius: 3px;
+            padding: 3px;
             color: white;
+            cursor: pointer;
+        }
+
+        #date>input:hover {
+            border: 1px solid #7b7bf0;
+        }
+
+        .current-day {
+            background-color: #7b7bf0;
+        }
+
+        .current-day:hover {
+            background-color: #3a3ae6;
+        }
+
+        .prev-month {
+            color: #546d9c;
+        }
+
+        .next-month {
+            color: #546d9c;
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .calendar {
+                min-width: 500px;
+                width: 40%;
+                padding: 50px 20px 50px 20px;
+            }
         }
     </style>
 </head>
@@ -65,7 +155,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/templete/istanbul.html"><img src="/img/icon2.png" alt="Istanbul Image">İstanbul</a>
+                        <a class="nav-link active" aria-current="page" href="/templete/istanbul.html"><img
+                                src="/img/icon2.png" alt="Istanbul Image">İstanbul</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/templete/plan.html">Plan Oluştur</a>
@@ -88,10 +179,64 @@
     </nav>
     <!-- Navbar End -->
 
+    <!-- Calender Start -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="calendar">
+                    <div class="cal-menu">
+                        <span id="month-year" class="current-month"></span> <span id="year" class="current-year"></span>
+                        <span id="date"><input type="date"></span>
+                    </div>
+                    <div class="cal-body">
+                        <div class="previous"><i class="fa-solid fa-backward"></i></div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                    <th>Sun</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendar-body"></tbody>
+                        </table>
+                        <div class="next"><i class="fa-solid fa-forward"></i></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Calender End -->
+
+            <!-- Button Start -->
+            <div class="col-md-6">
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck1">Kültür</label>
+                  
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck2">Sanat</label>
+                  
+                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck3">Eğlence</label>
+                  </div>
+                  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck1">Doğa</label>
+                  
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck2">Tarih</label>
+                  
+                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btncheck3">Alışveriş</label>
+                  </div>
+            </div>
+        </div>
+    </div>
+
    
-
-
-
 
     <!-- Footer Start -->
     <footer class="site-footer">
@@ -105,23 +250,23 @@
                         aperiam quidem vitae error, deleniti labore et doloremque accusantium rem enim neque
                         voluptatibus dolor explicabo.</p>
                 </div>
-
-                <div class="col-xs-6 col-md-5 pe-5">
-                    <h6>İLÇELER</h6>
-                    <div class="footer">
+                <div class="col-xs-6 col-md-5">
+                    <h6 class="mb-3">İLÇELER</h6>
+                    <div class="row row-cols-3">
                         <div class="col">
                             <ul id="ilce-listesi-1" class="footer-links"></ul>
                         </div>
                         <div class="col">
-                            <ul id="ilce-listesi-2" class="footer-links"></ul>
+                            <ul id="ilce-listesi-2" class="footer-links">
+                                <!-- İlçeler buraya dinamik olarak JavaScript ile eklenecek -->
+                            </ul>
                         </div>
                         <div class="col">
                             <ul id="ilce-listesi-3" class="footer-links"></ul>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-xs-6 col-md-2  ms-0">
+                <div class="col-xs-6 col-md-2 ms-0">
                     <h6 class="">www.gezirehberim.com</h6>
                     <ul class="footer-links">
                         <li><a href="">Hakkımızda</a></li>
@@ -141,7 +286,6 @@
                         <a href="#">Scanfcode</a>.
                     </p>
                 </div>
-
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <ul class="social-icons">
                         <li><a class="facebook" href="#"><i class="bi bi-facebook"></i></a></li>
@@ -160,6 +304,185 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="/js/app.js"></script>
+
+    <!-- Calender JS -->
+    <script>
+        let currentYear, currentMonth, currentDay;
+        let monthYearHeader = document.getElementById("month-year");
+        let yearHeader = document.getElementById("year");
+
+        function generateCalendar(year, month, day) {
+            const calendarBody = document.getElementById("calendar-body");
+
+            // Clear the previous calendar
+            calendarBody.innerHTML = "";
+
+            // Create a date object for the first day of the current month
+            const firstDay = new Date(year, month, 1);
+
+            // Get the number of days in the current month
+            const lastDay = new Date(year, month + 1, 0);
+
+            // Set the header to display the month and year
+            monthYearHeader.innerText = `${firstDay.toLocaleString("default", {
+                month: "long"
+            })}`;
+            yearHeader.innerText = `${year}`;
+
+            // Create a row for each week in the month
+            let currentRow = document.createElement("tr");
+
+            // Fill in the cells for the previous month
+            for (let i = 0; i < firstDay.getDay(); i++) {
+                const cell = document.createElement("td");
+                const prevMonthLastDate = new Date(year, month, 0).getDate();
+                cell.innerText = prevMonthLastDate - firstDay.getDay() + i + 1;
+                cell.classList.add("prev-month");
+                currentRow.appendChild(cell);
+            }
+
+            for (let currDay = 1; currDay <= lastDay.getDate(); currDay++) {
+                const cell = document.createElement("td");
+                cell.innerText = currDay;
+
+                // Add a class to the current day
+                if (
+                    currDay === day &&
+                    year === new Date().getFullYear() &&
+                    month === new Date().getMonth()
+                ) {
+                    cell.classList.add("current-day");
+                }
+
+                // Add a click event listener to update the date input value and currentDay
+                cell.addEventListener("click", function () {
+                    const selectedDate = new Date(year, month, currDay);
+                    dateInput.value = selectedDate.toISOString().slice(0, 10);
+                    currentDay = currDay; // Update currentDay
+                    generateCalendar(currentYear, currentMonth, currentDay); // Regenerate calendar with updated currentDay
+                });
+
+                currentRow.appendChild(cell);
+
+                // Start a new row for each week
+                if (currentRow.children.length === 7) {
+                    calendarBody.appendChild(currentRow);
+                    currentRow = document.createElement("tr");
+                }
+            }
+
+            // Fill in the cells for the next month
+            const nextMonthDays = 6 - lastDay.getDay();
+            for (let i = 0; i < nextMonthDays; i++) {
+                const cell = document.createElement("td");
+                cell.innerText = i + 1;
+                cell.classList.add("next-month");
+                currentRow.appendChild(cell);
+            }
+
+            // Add the last row to the calendar
+            calendarBody.appendChild(currentRow);
+        }
+
+        // Handle click on the current month to show all months
+        monthYearHeader.addEventListener("click", function () {
+            const monthPicker = prompt("Enter a month (1-12):");
+            if (monthPicker !== null) {
+                const selectedMonth = parseInt(monthPicker, 10) - 1;
+                if (!isNaN(selectedMonth) && selectedMonth >= 0 && selectedMonth <= 11) {
+                    currentMonth = selectedMonth;
+
+                    // Update the date input value when the month is changed
+                    const selectedDate = new Date(currentYear, currentMonth, currentDay);
+                    dateInput.value = selectedDate.toISOString().slice(0, 10);
+
+                    generateCalendar(currentYear, currentMonth, currentDay);
+                } else {
+                    alert("Invalid month. Please enter a number between 1 and 12.");
+                }
+            }
+        });
+
+        // Handle click on the current year to navigate through past and future years
+        yearHeader.addEventListener("click", function () {
+            const yearPicker = prompt("Enter a year:");
+            if (yearPicker !== null) {
+                // Ensure that the entered year is at least 4 digits long
+                if (/^\d{4}$/.test(yearPicker)) {
+                    const selectedYear = parseInt(yearPicker, 10);
+                    if (!isNaN(selectedYear)) {
+                        currentYear = selectedYear;
+
+                        // Update the date input value when the year is changed
+                        const selectedDate = new Date(currentYear, currentMonth, currentDay);
+                        dateInput.value = selectedDate.toISOString().slice(0, 10);
+
+                        generateCalendar(currentYear, currentMonth, currentDay);
+                    } else {
+                        alert("Invalid year. Please enter a valid year.");
+                    }
+                } else {
+                    alert("Invalid year format. Please enter a 4-digit year.");
+                }
+            }
+        });
+
+        // Get references to the date input and set its default value to the current date
+        const dateInput = document.querySelector("input[type='date']");
+        const currentDate = new Date();
+        dateInput.value = currentDate.toISOString().slice(0, 10);
+
+        // Add an event listener to the date input to update the calendar when the date changes
+        dateInput.addEventListener("change", function () {
+            const selectedDate = new Date(this.value);
+            currentYear = selectedDate.getFullYear();
+            currentMonth = selectedDate.getMonth();
+            currentDay = selectedDate.getDate();
+            generateCalendar(currentYear, currentMonth, currentDay);
+        });
+
+        // Call the function to generate the calendar for the current date
+        currentYear = currentDate.getFullYear();
+        currentMonth = currentDate.getMonth();
+        currentDay = currentDate.getDate();
+        generateCalendar(currentYear, currentMonth, currentDay);
+
+        // Get references to the "Previous" and "Next" buttons
+        let prev = document.querySelector(".previous"),
+            next = document.querySelector(".next");
+        // Event listener for the "Previous" button
+        prev.addEventListener("click", function () {
+            currentMonth--;
+
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+
+            // Update the date input value
+            const newDate = new Date(currentYear, currentMonth, currentDay);
+            dateInput.value = newDate.toISOString().slice(0, 10);
+
+            generateCalendar(currentYear, currentMonth, currentDay);
+        });
+
+        // Event listener for the "Next" button
+        next.addEventListener("click", function () {
+            currentMonth++;
+
+            if (currentMonth > 11) {
+                currentMonth = 0; // January
+                currentYear++;
+            }
+
+            // Update the date input value
+            const newDate = new Date(currentYear, currentMonth, currentDay);
+            dateInput.value = newDate.toISOString().slice(0, 10);
+
+            generateCalendar(currentYear, currentMonth, currentDay);
+        });
+
+    </script>
 </body>
 
 </html>
